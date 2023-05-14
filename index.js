@@ -47,6 +47,11 @@ module.exports = {
     "react/display-name": "error",
     semi: ["error", "always"],
     "no-useless-concat": "off",
+    "prefer-arrow-callback": "error",
+    "no-restricted-syntax": ["error", {
+      "selector": "FunctionDeclaration",
+      "message": "Function declarations are not allowed. Use arrow functions instead."
+    }]
   },
   overrides: [
     {

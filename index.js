@@ -51,7 +51,14 @@ module.exports = {
     "no-restricted-syntax": ["error", {
       "selector": "FunctionDeclaration",
       "message": "Function declarations are not allowed. Use arrow functions instead."
-    }]
+    }],
+    "consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports",
+        "disallowTypeAnnotations": false
+      }
+    ]
   },
   overrides: [
     {

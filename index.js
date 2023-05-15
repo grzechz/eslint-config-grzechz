@@ -52,7 +52,7 @@ module.exports = {
       "selector": "FunctionDeclaration",
       "message": "Function declarations are not allowed. Use arrow functions instead."
     }],
-    "consistent-type-imports": [
+    "@typescript-eslint/consistent-type-imports": [
       "error",
       {
         "prefer": "type-imports",

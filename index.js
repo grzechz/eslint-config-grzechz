@@ -58,7 +58,8 @@ module.exports = {
         "prefer": "type-imports",
         "disallowTypeAnnotations": false
       }
-    ]
+    ],
+    "arrow-body-style": ["error", "as-needed"],
   },
   overrides: [
     {

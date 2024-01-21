@@ -208,7 +208,13 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-uses-vars": "warn",
     "react/jsx-uses-react": "warn",
-
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": [

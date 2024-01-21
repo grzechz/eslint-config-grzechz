@@ -223,6 +223,7 @@ module.exports = {
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-no-literals": "off",
     "react/no-array-index-key": "off",
+    "react/jsx-no-bind": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": [

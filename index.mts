@@ -19,6 +19,7 @@ export default tseslint.config(
       globals: { ...globals.browser, ...globals.node }
     }
   },
+  tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   pluginJsxA11y.flatConfigs.recommended,
   pluginImportX.flatConfigs.recommended,
@@ -158,10 +159,10 @@ export default tseslint.config(
       ],
       "getter-return": "error",
 
-      "import/first": "error",
-      "import/no-amd": "error",
-      "import/no-anonymous-default-export": "error",
-      "import/no-webpack-loader-syntax": "error",
+      "import-x/first": "error",
+      "import-x/no-amd": "error",
+      "import-x/no-anonymous-default-export": "error",
+      "import-x/no-webpack-loader-syntax": "error",
 
       "react/forbid-foreign-prop-types": ["error", { allowInPropTypes: true }],
       "react/jsx-no-comment-textnodes": "error",
@@ -233,10 +234,12 @@ export default tseslint.config(
         },
       ],
       "@typescript-eslint/no-var-requires": "off",
-      "import/no-cycle": "error",
-      "import/no-default-export": "error",
-      "import/no-self-import": "error",
-      "import/no-unresolved": "off",
+      "import-x/no-cycle": ["error", {
+        maxDepth: 5
+      }],
+      "import-x/no-default-export": "error",
+      "import-x/no-self-import": "error",
+      "import-x/no-unresolved": "off",
       "no-console": "error",
       "no-warning-comments": [
         "error",

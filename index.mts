@@ -157,12 +157,6 @@ export default tseslint.config(
         },
       ],
       "getter-return": "error",
-
-      "import-x/first": "error",
-      "import-x/no-amd": "error",
-      "import-x/no-anonymous-default-export": "error",
-      "import-x/no-webpack-loader-syntax": "error",
-      "import-x/default": "off",
       "react/forbid-foreign-prop-types": ["error", { allowInPropTypes: true }],
       "react/jsx-no-comment-textnodes": "error",
       "react/jsx-no-duplicate-props": "error",
@@ -233,6 +227,12 @@ export default tseslint.config(
         },
       ],
       "@typescript-eslint/no-var-requires": "off",
+      "import-x/first": "error",
+      "import-x/no-amd": "error",
+      "import-x/no-anonymous-default-export": "error",
+      "import-x/no-webpack-loader-syntax": "error",
+      "import-x/default": "off",
+      "import-x/no-named-as-default-member": "off",
       "import-x/no-cycle": [
         "error",
         {

@@ -1,9 +1,9 @@
 {
   "$schema": "http://json.schemastore.org/package",
   "name": "eslint-config-grzechz",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "exports": {
-    ".": "./out/index.mjs"
+    ".": "./dist/index.mjs"
   },
   "repository": {
     "url": "https://github.com/grzechz/eslint-config-grzechz",

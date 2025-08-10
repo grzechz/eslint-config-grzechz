@@ -6,10 +6,10 @@
 npm i eslint eslint-config-grzechz jest
 ```
 
-Then, add this to your `.eslintrc.js` file:
+Then, add this to your `eslint.config.mts` file:
 
-```js
-module.exports = {
-  extends: "grzechz",
-};
+```ts
+import eslintConfigGrzechz from 'eslint-config-grzechz';
+
+export default eslintConfigGrzechz;
 ```

@@ -1,12 +1,12 @@
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import pluginReact from "eslint-plugin-react";
-import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
-import pluginImportX from 'eslint-plugin-import-x'
-import pluginJest from 'eslint-plugin-jest';
-import pluginReactHooks from 'eslint-plugin-react-hooks'
-import pluginPrettierConfig from 'eslint-plugin-prettier/recommended';
+import js from "@eslint/js"
+import globals from "globals"
+import tseslint from "typescript-eslint"
+import pluginReact from "eslint-plugin-react"
+import pluginJsxA11y from "eslint-plugin-jsx-a11y"
+import pluginImportX from "eslint-plugin-import-x"
+import pluginJest from "eslint-plugin-jest"
+import pluginReactHooks from "eslint-plugin-react-hooks"
+import pluginPrettierConfig from "eslint-plugin-prettier/recommended"
 
 export default tseslint.config(
   {
@@ -16,8 +16,8 @@ export default tseslint.config(
     },
     extends: [js.configs.recommended],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node }
-    }
+      globals: { ...globals.browser, ...globals.node },
+    },
   },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
@@ -27,7 +27,6 @@ export default tseslint.config(
   pluginImportX.flatConfigs.typescript,
   pluginImportX.flatConfigs.react,
   pluginReactHooks.configs["recommended-latest"],
-  pluginJest.configs["flat/all"],
   pluginPrettierConfig,
   {
     rules: {
@@ -234,9 +233,12 @@ export default tseslint.config(
         },
       ],
       "@typescript-eslint/no-var-requires": "off",
-      "import-x/no-cycle": ["error", {
-        maxDepth: 5
-      }],
+      "import-x/no-cycle": [
+        "error",
+        {
+          maxDepth: 5,
+        },
+      ],
       "import-x/no-default-export": "error",
       "import-x/no-self-import": "error",
       "import-x/no-unresolved": "off",
@@ -266,7 +268,6 @@ export default tseslint.config(
         },
       ],
       "arrow-body-style": ["error", "as-needed"],
-
     },
   },
   {
@@ -311,6 +312,13 @@ export default tseslint.config(
       "no-useless-constructor": "off",
       "@typescript-eslint/no-useless-constructor": "warn",
     },
-
+  },
+  {
+    files: ["**/*.test.ts", "**/*.test.tsx", "**/*.test.mts", "**/*.test.cts"],
+    plugins: { jest: pluginJest },
+    languageOptions: {
+      globals: pluginJest.environments.globals.globals,
+    },
+    rules: pluginJest.configs["flat/all"].rules,
   }
-);
+)

@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@types/eslint-plugin-jsx-a11y": "^6.10.0",
+    "jest": "^30.0.5",
     "jiti": "^2.5.1"
   }
 }

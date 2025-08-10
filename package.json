@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/package",
   "name": "eslint-config-grzechz",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "exports": {
     ".": "./dist/index.mjs"
   },
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "publishPackage": "npm publish --access public"
+    "publishPackage": "rm -r ./dist && npm run build && npm publish --access public"
   },
   "author": "Grzegorz Zadora",
   "license": "MIT",

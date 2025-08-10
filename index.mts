@@ -1,12 +1,12 @@
-import js from "@eslint/js"
-import globals from "globals"
-import tseslint from "typescript-eslint"
-import pluginReact from "eslint-plugin-react"
-import pluginJsxA11y from "eslint-plugin-jsx-a11y"
-import pluginImportX from "eslint-plugin-import-x"
-import pluginJest from "eslint-plugin-jest"
-import pluginReactHooks from "eslint-plugin-react-hooks"
-import pluginPrettierConfig from "eslint-plugin-prettier/recommended"
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import pluginReact from "eslint-plugin-react";
+import pluginJsxA11y from "eslint-plugin-jsx-a11y";
+import pluginImportX from "eslint-plugin-import-x";
+import pluginJest from "eslint-plugin-jest";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import pluginPrettierConfig from "eslint-plugin-prettier/recommended";
 
 export default tseslint.config(
   {
@@ -162,7 +162,7 @@ export default tseslint.config(
       "import-x/no-amd": "error",
       "import-x/no-anonymous-default-export": "error",
       "import-x/no-webpack-loader-syntax": "error",
-
+      "import-x/default": "off",
       "react/forbid-foreign-prop-types": ["error", { allowInPropTypes: true }],
       "react/jsx-no-comment-textnodes": "error",
       "react/jsx-no-duplicate-props": "error",
@@ -321,4 +321,4 @@ export default tseslint.config(
     },
     rules: pluginJest.configs["flat/all"].rules,
   }
-)
+);
